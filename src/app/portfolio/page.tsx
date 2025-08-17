@@ -52,7 +52,7 @@ const EXPERIENCE = [
     ],
     certs: [
       
-      { img: "/certs/thumbs/labmentix.jpeg", href: "/certs/thumbs/labmentix.jpeg" },
+      { img: "/certs/thumbs/Labmentix.jpeg", href: "/certs/thumbs/Labmentix.jpeg" },
     ],
   },
   {
