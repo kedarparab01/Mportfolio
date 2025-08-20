@@ -219,49 +219,46 @@ export default function Portfolio() {
         </nav>
         </header>
       {/* Hero */}
-      <section id="home" className="max-w-6xl mx-auto px-6 md:px-10 pt-16 md:pt-24 pb-8">
-  <motion.div 
-    initial={{ opacity: 0, y: 12 }} 
-    animate={{ opacity: 1, y: 0 }} 
+<section id="home" className="max-w-6xl mx-auto px-6 md:px-10 pt-16 md:pt-24 pb-8">
+  <motion.div
+    initial={{ opacity: 0, y: 12 }}
+    animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.6 }}
-    className="flex flex-col items-center text-center"
+    className="grid md:grid-cols-2 gap-10 items-center"
   >
-    {/* Profile Picture */}
-    <img
-      src="/images/profile.jpg"
-      alt="Professional headshot"
-      className="rounded-full w-48 h-48 object-cover shadow-md border mb-4"
-    />
+    {/* LEFT: copy */}
+    <div className="text-center md:text-left">
+      <p className="text-sky-700 font-medium">Driven. Strategic. Impact-oriented.</p>
 
-    {/* Phrase under photo */}
-    <p className="text-sky-700 font-medium">
-      Driven. Strategic. Impact-oriented.
-    </p>
+      <h1 className="mt-2 text-3xl md:text-5xl font-semibold leading-tight">
+        Aspiring Product Manager & Strategy Consultant
+      </h1>
 
-    {/* Headline */}
-    <h1 className="mt-2 text-3xl md:text-5xl font-semibold leading-tight">
-      Aspiring Product Manager & Strategy Consultant
-    </h1>
+      <p className="mt-4 text-slate-700 md:max-w-xl md:pr-4 mx-auto md:mx-0">
+        I blend the precision of an engineer with the vision of a strategist. From leading service recovery during
+        nationwide network outages at Tata Communications to building AI-powered health-tech solutions, my work is about
+        solving high-stakes problems that matter.
+      </p>
 
-    {/* Description */}
-    <p className="mt-4 text-slate-700 max-w-3xl">
-      I blend the precision of an engineer with the vision of a strategist. From leading service recovery during
-      nationwide network outages at Tata Communications to building AI-powered health-tech solutions, my work is about
-      solving high-stakes problems that matter.
-    </p>
+      <div className="mt-6 flex flex-wrap gap-3 justify-center md:justify-start">
+        <a href="#projects">
+          <Button>View Projects <ArrowRight className="ml-2 h-4 w-4" /></Button>
+        </a>
+        <a href={LINKS.resume} download>
+          <Button variant="outline">
+            <Download className="mr-2 h-4 w-4" />Download Resume
+          </Button>
+        </a>
+      </div>
+    </div>
 
-    {/* Buttons */}
-    <div className="mt-6 flex flex-wrap gap-3 justify-center">
-      <a href="#projects">
-        <Button>
-          View Projects <ArrowRight className="ml-2 h-4 w-4"/>
-        </Button>
-      </a>
-      <a href={LINKS.resume} download>
-        <Button variant="outline">
-          <Download className="mr-2 h-4 w-4"/>Download Resume
-        </Button>
-      </a>
+    {/* RIGHT: photo */}
+    <div className="flex justify-center md:justify-end">
+      <img
+        src="/images/profile.jpg"
+        alt="Professional headshot"
+        className="rounded-full w-56 h-56 md:w-64 md:h-64 object-cover shadow-md border"
+      />
     </div>
   </motion.div>
 </section>
