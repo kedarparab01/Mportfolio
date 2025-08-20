@@ -257,7 +257,7 @@ export default function Portfolio() {
       <img
         src="/images/profile.jpg"
         alt="Professional headshot"
-        className="rounded-full w-56 h-56 md:w-64 md:h-64 object-cover shadow-md border"
+        className="rounded-full w-56 h-56 md:w-80 md:h-80 object-cover shadow-md border"
       />
     </div>
   </motion.div>
