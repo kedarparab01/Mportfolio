@@ -100,7 +100,7 @@ const EXPERIENCE = [
   },
   {
     org: "GritFit — Fitness & Wellness Startup",
-    role: "Business Strategy & Product Development Associate - Student Consultant",
+    role: "Business Strategy & Product Development Associate (Student Consultant)",
     time: "Sept 2025 – Present · Remote",
     bullets: [
       "Collaborated with the founder to understand the startup vision, goals, and expectations, helping shape early-stage strategy and product planning.",
@@ -108,7 +108,7 @@ const EXPERIENCE = [
     ],
     certs: [
       
-      { img: "/certs/thumbs/Labmentix.jpeg", href: "/certs/thumbs/Labmentix.jpeg" },
+      
     ],
   },
 ];
@@ -158,10 +158,10 @@ const PROJECTS = [
   },
   {
     title: "ServiceNow Ticket Rate Reduction",
-    tags: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Scikit-learn", "Folium"],
+    tags: ["PowerBI", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Scikit-learn", "Folium"],
     description:
       "Applied machine learning on historical datasets and built Power BI dashboards to identify root causes of recurring ServiceNow tickets, collaborating with Tata Communications support teams to implement workflow improvements that reduced ticket volume, improved efficiency, and enhanced customer satisfaction.",
-    link: "https://github.com/meghashyam123/Airbnb-Data-Analysis"
+    link: ""
   },
 ];
 
