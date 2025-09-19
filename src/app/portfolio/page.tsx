@@ -190,13 +190,15 @@ const CERTS = [
 ];
 
 // ---- UI helpers ----
-const Section: React.FC<{ id: string; title: string; icon?: React.ReactNode; children: React.ReactNode }>=({ id, title, icon, children })=> (
+const Section: React.FC<{ id: string; title: string; icon?: React.ReactNode; children: React.ReactNode }> = ({ id, title, icon, children }) => (
   <section id={id} className="max-w-6xl mx-auto px-6 md:px-10 py-14 md:py-20">
-    <div className="flex items-center gap-3 mb-8">
-      {icon}
-      <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">{title}</h2>
+    <div className="rounded-2xl bg-white/85 backdrop-blur-md shadow-lg ring-1 ring-white/60 p-6 md:p-10">
+      <div className="flex items-center gap-3 mb-8">
+        {icon}
+        <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">{title}</h2>
+      </div>
+      {children}
     </div>
-    {children}
   </section>
 );
 
@@ -207,7 +209,11 @@ const Chip: React.FC<{ children: React.ReactNode }> = ({ children }) => (
 // ---- Page component ----
 export default function Portfolio() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white via-slate-50 to-white text-slate-900">
+    <div className="relative min-h-screen text-slate-900">
+  {/* Background image */}
+  <div className="absolute inset-0 -z-10 bg-[url('/images/bg.jpg')] bg-cover bg-center bg-fixed" />
+  {/* Soft white wash for readability */}
+  <div className="absolute inset-0 -z-10 bg-white/60" />
       {/* Header */}
         <header className="sticky top-0 z-40 backdrop-blur bg-sky-700 border-b">
         <nav className="max-w-6xl mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
@@ -285,7 +291,7 @@ export default function Portfolio() {
       {/* What I bring */}
       <Section id="value" title="What I bring" icon={<BookOpen className="h-6 w-6"/>}>
         <div className="grid md:grid-cols-2 gap-6">
-          <Card className="shadow-sm">
+          <Card className="shadow-sm bg-white/90 backdrop-blur-sm ring-1 ring-white/60">
             <CardHeader>
               <CardTitle>Product strategy rooted in market realities</CardTitle>
             </CardHeader>
