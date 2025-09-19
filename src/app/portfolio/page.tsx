@@ -249,9 +249,7 @@ export default function Portfolio() {
       </h1>
 
       <p className="mt-4 text-slate-700 md:max-w-xl md:pr-4 mx-auto md:mx-0">
-        I blend the precision of an engineer with the vision of a strategist. From leading service recovery during
-        nationwide network outages at Tata Communications to building AI-powered health-tech solutions, my work is about
-        solving high-stakes problems that matter.
+        Aspiring Product Manager and Strategy Consultant with 2 years at Tata Communications, where I worked on automation and customer experience projects using ServiceNow APIs. Skilled in product strategy, market analysis, and data-driven decision making with a background in engineering and machine learning. Passionate about building scalable digital products and helping organizations unlock growth through technology and strategy.
       </p>
 
       <div className="mt-6 flex flex-wrap gap-3 justify-center md:justify-start">
