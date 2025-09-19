@@ -158,7 +158,7 @@ const PROJECTS = [
   },
   {
     title: "ServiceNow Ticket Rate Reduction",
-    tags: ["PowerBI", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Scikit-learn", "Folium"],
+    tags: ["PowerBI", "Pandas", "NumPy", "Matplotlib","Scikit-learn"],
     description:
       "Applied machine learning on historical datasets and built Power BI dashboards to identify root causes of recurring ServiceNow tickets, collaborating with Tata Communications support teams to implement workflow improvements that reduced ticket volume, improved efficiency, and enhanced customer satisfaction.",
     link: ""
