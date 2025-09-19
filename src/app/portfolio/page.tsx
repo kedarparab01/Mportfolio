@@ -46,9 +46,8 @@ const EXPERIENCE = [
     role: "Business Analyst Intern",
     time: "Feb 2025 – May 2025 · Remote",
     bullets: [
-      "Led market & competitor research to inform product positioning and strategy.",
-      "Built interactive dashboards in Excel & Power BI; boosted stakeholder insight and engagement.",
-      "Supported client demos & presentations, contributing to a ~15% rise in customer engagement.",
+      "Collected and analyzed insights from multiple sources to conduct market research and competitor analysis, driving product strategy and informed decision-making.",
+      "Developed interactive dashboards and reports using Excel and Power BI, supporting client presentations and product demonstrations that drove a 15% increase in customer engagement during the internship.",
     ],
     certs: [
       
@@ -58,13 +57,15 @@ const EXPERIENCE = [
   {
     org: "Tata Communications",
     role: "Senior Engineer (Full-time)",
-    time: "Jul 2022 – Aug 2024 · Pune, India",
+    time: "Jul 2022 – Jan 2025 · Pune, India",
     bullets: [
-      "Led a cross‑functional team of 5 to resolve complex enterprise network challenges.",
-      "Redesigned service workflows with ops & engineering; raised customer satisfaction by ~20% in a year.",
-      "Built a fault‑management knowledge framework; enabled faster onboarding and collaboration (92% CSAT).",
-      "Used analytics to proactively monitor performance; improved uptime/responsiveness by ~15%.",
-      "Primary point of contact across teams & clients; aligned delivery to SLAs and strategic KPIs.",
+      "Led a cross-functional team of 5 engineers to resolve complex enterprise network challenges using data-driven insights, reducing resolution time and improving client outcomes.",
+      "Redesigned service workflows in collaboration with field operations, engineering, and support teams, driving a 20% increase in customer satisfaction within one year.",
+      "Developed a knowledge-sharing framework for fault management, accelerating onboarding, improving collaboration, and achieving a 92% Customer Satisfaction Score.",
+      "Managed projects using Jira and Trello, ensuring timely delivery and SLA/KPI compliance across internal teams and international clients.",
+      "Implemented process automation with Python and ServiceNow, reducing repetitive tasks by 30% and enabling focus on high-value engineering initiatives.",
+      "Automated ticketing processes on the ServiceNow API Bot team to streamline issue tracking and boost response efficiency.",
+      "Created monthly team performance reports using Power BI, Excel and presented insights to stakeholders to support metric-driven decision-making.",
     ],
         certs: [
       
@@ -95,6 +96,19 @@ const EXPERIENCE = [
     ],
     certs: [
         { img: "/certs/thumbs/ASDN-1.png", href: "/certs/ASDN.pdf" }
+    ],
+  },
+  {
+    org: "GritFit — Fitness & Wellness Startup",
+    role: "Business Strategy & Product Development Associate - Student Consultant",
+    time: "Sept 2025 – Present · Remote",
+    bullets: [
+      "Collaborated with the founder to understand the startup vision, goals, and expectations, helping shape early-stage strategy and product planning.",
+      "Assisted in market research and competitor analysis to identify opportunities for partnerships with local gyms and position the brand effectively.",
+    ],
+    certs: [
+      
+      { img: "/certs/thumbs/Labmentix.jpeg", href: "/certs/thumbs/Labmentix.jpeg" },
     ],
   },
 ];
@@ -257,7 +271,7 @@ export default function Portfolio() {
       <img
         src="/images/profile.jpg"
         alt="Professional headshot"
-        className="rounded-full w-56 h-56 md:w-80 md:h-80 object-cover shadow-md border"
+        className="rounded-full w-56 h-56 md:w-96 md:h-96 object-cover shadow-md border"
       />
     </div>
   </motion.div>
