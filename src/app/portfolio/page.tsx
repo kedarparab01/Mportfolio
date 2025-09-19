@@ -171,6 +171,7 @@ const EDUCATION = [
     school: "Duke University — Pratt School of Engineering / Fuqua",
     detail: "Master of Engineering Management (Aug 2025 – Present)",
     bullets: ["Competitive Strategy", "Product Management in High‑Tech Companies", "Business Law"],
+    logo: "/certs/thumbs/duke.png",
   },
   {
     school: "KJ Somaiya College of Engineering",
@@ -179,6 +180,7 @@ const EDUCATION = [
       "Business Analytics, Engineering Economics & Financial Management",
       "RTOS, Speech Processing, Embedded Systems, Big Data, DSP, Org Behaviour",
     ],
+    logo: "/certs/thumbs/som.png",
   },
 ];
 
@@ -209,11 +211,7 @@ const Chip: React.FC<{ children: React.ReactNode }> = ({ children }) => (
 // ---- Page component ----
 export default function Portfolio() {
   return (
-    <div className="relative min-h-screen text-slate-900">
-  {/* Background image */}
-  <div className="absolute inset-0 -z-10 bg-[url('/images/bg.jpg')] bg-cover bg-center bg-fixed" />
-  {/* Soft white wash for readability */}
-  <div className="absolute inset-0 -z-10 bg-white/60" />
+    <div className="min-h-screen bg-white text-slate-900">
       {/* Header */}
         <header className="sticky top-0 z-40 backdrop-blur bg-sky-700 border-b">
         <nav className="max-w-6xl mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
@@ -246,46 +244,54 @@ export default function Portfolio() {
         </nav>
         </header>
       {/* Hero */}
-<section id="home" className="max-w-6xl mx-auto px-6 md:px-10 pt-16 md:pt-24 pb-8">
-  <motion.div
-    initial={{ opacity: 0, y: 12 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.6 }}
-    className="grid md:grid-cols-2 gap-10 items-center"
-  >
-    {/* LEFT: copy */}
-    <div className="text-center md:text-left">
-      <p className="text-sky-700 font-medium">Driven. Strategic. Impact-oriented.</p>
+  <section
+  id="home"
+  className="relative bg-cover bg-center bg-no-repeat min-h-[560px] md:min-h-[660px]"
+  style={{ backgroundImage: "url('/images/bg2.jpeg')" }}
+>
+  {/* full-bleed readability overlay */}
+  <div className="absolute inset-0 bg-white/70 pointer-events-none" />
 
-      <h1 className="mt-2 text-3xl md:text-5xl font-semibold leading-tight">
-        Aspiring Product Manager & Strategy Consultant
-      </h1>
-
-      <p className="mt-4 text-slate-700 md:max-w-xl md:pr-4 mx-auto md:mx-0">
-        Aspiring Product Manager and Strategy Consultant with 2 years at Tata Communications, where I worked on automation and customer experience projects using ServiceNow APIs. Skilled in product strategy, market analysis, and data-driven decision making with a background in engineering and machine learning. Passionate about building scalable digital products and helping organizations unlock growth through technology and strategy.
-      </p>
-
-      <div className="mt-6 flex flex-wrap gap-3 justify-center md:justify-start">
-        <a href="#projects">
-          <Button>View Projects <ArrowRight className="ml-2 h-4 w-4" /></Button>
-        </a>
-        <a href={LINKS.resume} download>
-          <Button variant="outline">
-            <Download className="mr-2 h-4 w-4" />Download Resume
-          </Button>
-        </a>
+  <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-10 pt-20 md:pt-28 pb-16">
+    <motion.div
+      initial={{ opacity: 0, y: 12 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      className="grid md:grid-cols-2 gap-10 items-center"
+    >
+      {/* LEFT: copy */}
+      <div className="text-center md:text-left">
+        <p className="text-sky-700 font-medium">Driven. Strategic. Impact-oriented.</p>
+        <h1 className="mt-2 text-3xl md:text-5xl font-semibold leading-tight">
+          Aspiring Product Manager & Strategy Consultant
+        </h1>
+        <p className="mt-4 text-slate-700 md:max-w-2xl md:pr-4 mx-auto md:mx-0">
+          Aspiring Product Manager and Strategy Consultant with 2 years at Tata Communications, where I worked on
+          automation and customer experience projects using ServiceNow APIs. Skilled in product strategy, market
+          analysis, and data-driven decision making with a background in engineering and machine learning. Passionate
+          about building scalable digital products and helping organizations unlock growth through technology and
+          strategy.
+        </p>
+        <div className="mt-6 flex flex-wrap gap-3 justify-center md:justify-start">
+          <a href="#projects">
+            <Button>View Projects <ArrowRight className="ml-2 h-4 w-4" /></Button>
+          </a>
+          <a href={LINKS.resume} download>
+            <Button variant="outline"><Download className="mr-2 h-4 w-4" />Download Resume</Button>
+          </a>
+        </div>
       </div>
-    </div>
 
-    {/* RIGHT: photo */}
-    <div className="flex justify-center md:justify-end">
-      <img
-        src="/images/profile.jpg"
-        alt="Professional headshot"
-        className="rounded-full w-56 h-56 md:w-96 md:h-96 object-cover shadow-md border"
-      />
-    </div>
-  </motion.div>
+      {/* RIGHT: photo */}
+      <div className="flex justify-center md:justify-end">
+        <img
+          src="/images/profile.jpg"
+          alt="Professional headshot"
+          className="rounded-full w-56 h-56 md:w-96 md:h-96 object-cover shadow-md border"
+        />
+      </div>
+    </motion.div>
+  </div>
 </section>
 
       {/* What I bring */}
@@ -412,24 +418,37 @@ export default function Portfolio() {
       </Section>
 
       {/* Education */}
-      <Section id="education" title="Education" icon={<GraduationCap className="h-6 w-6"/>}>
-        <div className="grid gap-6">
-          {EDUCATION.map((e) => (
-            <Card key={e.school} className="shadow-sm">
-              <CardHeader className="pb-2">
+  <Section id="education" title="Education" icon={<GraduationCap className="h-6 w-6" />}>
+    <div className="grid gap-6">
+      {EDUCATION.map((e) => (
+        <Card key={e.school} className="shadow-sm">
+          <CardHeader className="pb-2">
+            <div className="flex items-start gap-3">
+              {e.logo && (
+                <img
+                  src={e.logo}
+                  alt="Duke University logo"
+                  className="h-8 w-8 md:h-10 md:w-10 object-contain shrink-0"
+                />
+              )}
+              <div>
                 <CardTitle className="text-lg">{e.school}</CardTitle>
                 <div className="text-sm text-slate-600">{e.detail}</div>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2">
-                  {e.bullets.map((b) => (<Chip key={b}>{b}</Chip>))}
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </Section>
+              </div>
+            </div>
+          </CardHeader>
 
+          <CardContent>
+            <div className="flex flex-wrap gap-2">
+              {e.bullets.map((b) => (
+                <Chip key={b}>{b}</Chip>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+  </Section>
       {/* Certificates */}
       <Section id="certs" title="Certificates & Achievements" icon={<Award className="h-6 w-6"/>}>
         <div className="grid md:grid-cols-2 gap-6">
