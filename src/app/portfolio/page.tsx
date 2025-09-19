@@ -247,10 +247,10 @@ export default function Portfolio() {
   <section
   id="home"
   className="relative bg-cover bg-center bg-no-repeat min-h-[560px] md:min-h-[660px]"
-  style={{ backgroundImage: "url('/images/bg2.jpeg')" }}
+  style={{ backgroundImage: "url('/images/bg3.jpg')" }}
 >
   {/* full-bleed readability overlay */}
-  <div className="absolute inset-0 bg-white/70 pointer-events-none" />
+  <div className="absolute inset-0 bg-white/40 pointer-events-none" />
 
   <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-10 pt-20 md:pt-28 pb-16">
     <motion.div
