@@ -156,6 +156,13 @@ const PROJECTS = [
       "Performed EDA and geospatial mapping on Airbnb listings, built a price prediction model, and uncovered trends in booking patterns, reviews, and neighborhood pricing.",
     link: "https://github.com/meghashyam123/Airbnb-Data-Analysis"
   },
+  {
+    title: "ServiceNow Ticket Rate Reduction",
+    tags: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Scikit-learn", "Folium"],
+    description:
+      "Applied machine learning on historical datasets and built Power BI dashboards to identify root causes of recurring ServiceNow tickets, collaborating with Tata Communications support teams to implement workflow improvements that reduced ticket volume, improved efficiency, and enhanced customer satisfaction.",
+    link: "https://github.com/meghashyam123/Airbnb-Data-Analysis"
+  },
 ];
 
 
